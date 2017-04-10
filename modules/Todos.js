@@ -4,7 +4,7 @@ define(function (require) {
 
 	var TodoItemView = Marionette.View.extend({
 		tagName: 'li',
-		template: _.template('<a href="#/todos/<%= id %>"><%= title %></a>')
+		template: _.template('<a href="#/Todos/<%= id %>"><%= title %></a>')
 	})
 
 	var TodoDetailView = Marionette.View.extend({
@@ -35,9 +35,9 @@ define(function (require) {
 
 	var Router = Marionette.AppRouter.extend({
 		appRoutes: {
-			'todos': 'index',
-			'todos/': 'index',
-			'todos/:id': 'detail'
+			'Todos': 'index',
+			'Todos/': 'index',
+			'Todos/:id': 'detail'
 		}
 	})
 
@@ -48,7 +48,6 @@ define(function (require) {
 			})
 		},
 		index: function () {
-			console.log('index')
 			this.showView(new TodoListView())
 		},
 		detail: function (id) {

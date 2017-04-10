@@ -27,7 +27,7 @@ define(function(require) {
 			var that = this
 			that.module && that.module.destroy()
 			seajs.use(module, function (App) {
-				that.module = new App({region: that.region, module: module.toLowerCase() + '/'}).start()
+				that.module = new App({region: that.region, module: module + '/'}).start()
 				Backbone.history.loadUrl(Backbone.history.getHash())
 			})
 		},
@@ -36,6 +36,7 @@ define(function(require) {
 		},
 		onStart: function () {
 			Backbone.history.start()
+			Backbone.history.navigate('Todos/', {trigger: true})
 		}
 	})
 
