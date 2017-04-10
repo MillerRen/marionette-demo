@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Marionette Demo</title>
+	<script src="js/sea.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/backbone.radio.js"></script>
+	<script src="js/backbone.marionette.js"></script>
+</head>
+<body>
+	<div id="app">
+		
+	</div>
+	
+	<script>
+
+		seajs.config({
+			base: './modules/'
+		})
+		
+		seajs.use('App', function (App) {
+			new App({
+				region: '#app'
+			})
+			.start()
+		})
+		
+	</script>
+</body>
+</html>
