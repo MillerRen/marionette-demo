@@ -22,7 +22,7 @@ define(function(require) {
 				controller: this
 			})
 		},
-		// 加载并初始化应用
+		// load and start app
 		loadModule: function (module, subroute) {
 			var that = this
 			that.module && that.module.destroy()

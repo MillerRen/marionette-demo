@@ -12,14 +12,14 @@ define(function (require) {
 	})
 
 	var EmptyView = Marionette.View.extend({
-		template: _.template('啥也没有')
+		template: _.template('It's empty!)
 	})
 
 	var TodoListView = Marionette.CompositeView.extend({
 		emptyView: EmptyView,
 		childView: TodoItemView,
 		collection: todos,
-		template: _.template('<h3>todos <button class="load">加载</button><button class="clear">清空</button></h3><ul id="todo-list"></ul>'),
+		template: _.template('<h3>todos <button class="load">load</button><button class="clear">clear</button></h3><ul id="todo-list"></ul>'),
 		container: '#todo-list',
 		events: {
 			'click .load': 'fetchData',
